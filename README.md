@@ -30,8 +30,8 @@ List of examples to understand and practice AngularJS...
 </head>
 <body ng-app>
 	<h1>ng-init directive</h>
-	<div ng-init="myList=['My', 'Name', 'Is', 'Ala', 'Eddine', 'Jebali']">
-		myList = {{ myList }}
+	<div ng-init="programmingLanguages=['Java', 'PHP', 'C#', 'Perl', 'ASP', 'Ruby']">
+		programmingLanguages = {{ programmingLanguages }}
 	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
@@ -47,9 +47,9 @@ List of examples to understand and practice AngularJS...
 </head>
 <body ng-app>
 	<h1>ng-init directive</h>
-	<div ng-init="myList=['My', 'Name', 'Is', 'Ala', 'Eddine', 'Jebali']"></div>
+	<div ng-init="programmingLanguages=['Java', 'PHP', 'C#', 'Perl', 'ASP', 'Ruby']"></div>
 	<ul>
-		<li ng-repeat="itemValue in myList">{{itemValue}}</li>
+		<li ng-repeat="programmingLanguage in programmingLanguages">{{programmingLanguage}}</li>
 	</ul>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
@@ -67,21 +67,21 @@ List of examples to understand and practice AngularJS...
 </head>
 <body ng-app>
 	<h1>ng-init directive</h>
-	<div ng-init="myList=['My', 'Name', 'Is', 'Ala', 'Eddine', 'Jebali']"></div>
+	<div ng-init="programmingLanguages=['Java', 'PHP', 'C#', 'Perl', 'ASP', 'Ruby']"></div>
 
 	<h1>Filters</h1>
 	<h2>All items:</h2>
 	<ul>
-		<li ng-repeat="itemValue in myList">{{itemValue}}</li>
+		<li ng-repeat="programmingLanguage in programmingLanguages">{{programmingLanguage}}</li>
 	</ul>
 
 	<h2>All items in uppercase</h2>
 	<ul>
-		<li ng-repeat="itemValue in myList">{{itemValue | uppercase}}</li>
+		<li ng-repeat="programmingLanguage in programmingLanguages">{{programmingLanguage | uppercase}}</li>
 	</ul>
 		
 	<h2>All items which contains 'a'</h2>
-	{{myList | filter: 'a'}}
+	{{programmingLanguages | filter: 'a'}}
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 </body>
@@ -95,11 +95,11 @@ List of examples to understand and practice AngularJS...
 </head>
 <body ng-app>
 	<h1>ng-init directive</h>
-	<div ng-init="myList=['My', 'Name', 'Is', 'Ala', 'Eddine', 'Jebali']"></div>
+	<div ng-init="programmingLanguages=['Java', 'PHP', 'C#', 'Perl', 'ASP', 'Ruby']"></div>
 	<input type="text" ng-model="search" placeholder="Type to filter" />
 	<div>
 		<ul>
-			<li ng-repeat="filteredItem in myList | filter: search">{{filteredItem | lowercase}}</li>
+			<li ng-repeat="filteredItem in programmingLanguages | filter: search">{{filteredItem | lowercase}}</li>
 		</ul>
 	</div>
 
@@ -114,24 +114,28 @@ List of examples to understand and practice AngularJS...
 	<title>AnguleJS -Examples</title>
 </head>
 <body ng-app>
-	<div ng-init="myList=[
-					{id: 1, 'content': 'My'}, 
-					{id: 2, 'content': 'Name'}, 
-					{id: 3, 'content': 'Is'}, 
-					{id: 4, 'content': 'Ala'}, 
-					{id: 5, 'content': 'Eddine'}, 
-					{id: 6, 'content': 'Jebali'}
+	<div ng-init="programmingLanguages=[
+					{id: 1, 'content': 'Java'}, 
+					{id: 2, 'content': 'PHP'}, 
+					{id: 3, 'content': 'C#'}, 
+					{id: 4, 'content': 'Perl'}, 
+					{id: 5, 'content': 'ASP'}, 
+					{id: 6, 'content': 'Ruby'}
 				]"></div>
 	<input type="text" ng-model="search" placeholder="Type to filter" />
 	<div>
 		<ul>
-			<li ng-repeat="filteredItem in myList | filter: search | orderBy: '-content'">{{filteredItem | lowercase}}</li>
+			<li ng-repeat="filteredItem in programmingLanguages | filter: search | orderBy: '-content'">{{filteredItem | lowercase}}</li>
 		</ul>
 	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
 </body>
 </html>
+```
+
+
+
 
 
 #Thank you!
