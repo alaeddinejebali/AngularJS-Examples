@@ -12,9 +12,13 @@
 	<!-- --------------------------------------------- #Part2 ---------------------------------------------- -->
 	<h1>ng-init directive</h>
 	<!-- The directive 'ng-app' means that we are in an AngularJS application  -->
-	<div ng-init="myList=['Ala', 'Eddine', 'Jebali']">
+	<div ng-init="myList=['My', 'Name', 'Is', 'Ala', 'Eddine', 'Jebali']">
 		myList = {{ myList }}
 	</div>
+
+	<ul>
+		<li ng-repeat="itemValue in myList">{{itemValue}}</li>
+	</ul>
 
 	<!-- Include AngularJS -->
 	<script src="angular.min.js"></script>
