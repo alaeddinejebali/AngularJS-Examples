@@ -3,7 +3,7 @@ List of examples to understand and practice AngularJS...
 
 #Using ng-model directive
 - Official Documentation: https://docs.angularjs.org/api/ng/directive/ngModel
-- The directive 'ng-app' means that we are in an AngularJS application
+- The directive ['ng-app'] [1] means that we are in an AngularJS application
 - Hello yourName example:
 ```html
 <html>
@@ -26,3 +26,5 @@ List of examples to understand and practice AngularJS...
 - (+216) 96 529 067
 - jebali.alaeddine (att gmail dot com)
 - Edited using http://dillinger.io/
+
+[1] https://docs.angularjs.org/api/ng/directive/ngApp
