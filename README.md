@@ -88,6 +88,7 @@ List of examples to understand and practice AngularJS...
 </html>
 ```
 #Example #2 (Filter using text field)
+```html
 <html>
 <head>
 	<title>AnguleJS -Examples</title>
@@ -107,6 +108,7 @@ List of examples to understand and practice AngularJS...
 </html>
 ```
 #Example #3 (Sort content [Z-A])
+```html
 <html>
 <head>
 	<title>AnguleJS -Examples</title>
