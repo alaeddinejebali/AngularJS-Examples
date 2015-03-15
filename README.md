@@ -191,7 +191,7 @@ List of examples to understand and practice AngularJS...
 	<input type="text" ng-model="search" placeholder="Type to filter" />
 	<div>
 		<ul>
-			<li ng-repeat="filteredItem in programmingLanguages | filter: search | orderBy: sortingOrder + sortingKey">{{filteredItem | lowercase}}</li>
+			<li ng-repeat="filteredItem in programmingLanguages | filter: search | orderBy: sortingOrder + sortingKey">{{filteredItem.content | lowercase}}</li>
 		</ul>
 	</div>
 
