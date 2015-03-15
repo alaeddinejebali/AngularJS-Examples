@@ -27,4 +27,5 @@ List of examples to understand and practice AngularJS...
 - jebali.alaeddine (att gmail dot com)
 - Edited using http://dillinger.io/
 
-[1] https://docs.angularjs.org/api/ng/directive/ngApp
+
+[1]: https://docs.angularjs.org/api/ng/directive/ngApp
