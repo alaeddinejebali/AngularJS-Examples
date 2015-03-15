@@ -38,19 +38,6 @@ List of examples to understand and practice AngularJS...
 </body>
 </html>
 ```
-<html>
-<head>
-	<title>AnguleJS -Examples</title>
-</head>
-<body ng-app>
-	<h1>ng-init directive</h>
-	<div ng-init="myList=['My', 'Name', 'Is', 'Ala', 'Eddine', 'Jebali']">
-		myList = {{ myList }}
-	</div>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-</body>
-</html>
 
 - Example #2 (using [ng-repeat] [2])
 ```html
@@ -70,7 +57,36 @@ List of examples to understand and practice AngularJS...
 </html>
 ```
 
+#Using Filters
+- Official documentation: https://docs.angularjs.org/api/ng/filter
+- Example #1
+```html
+<html>
+<head>
+	<title>AnguleJS -Examples</title>
+</head>
+<body ng-app>
+	<h1>ng-init directive</h>
+	<div ng-init="myList=['My', 'Name', 'Is', 'Ala', 'Eddine', 'Jebali']"></div>
 
+	<h1>Filters</h1>
+	<h2>All items:</h2>
+	<ul>
+		<li ng-repeat="itemValue in myList">{{itemValue}}</li>
+	</ul>
+
+	<h2>All items in uppercase</h2>
+	<ul>
+		<li ng-repeat="itemValue in myList">{{itemValue | uppercase}}</li>
+	</ul>
+		
+	<h2>All items which contains 'a'</h2>
+	{{myList | filter: 'a'}}
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</body>
+</html>
+```
 
 
 

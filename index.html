@@ -4,21 +4,41 @@
 </head>
 <body ng-app>
 	<!-- --------------------------------------------- #Part1 ---------------------------------------------- -->
-	<h1>ng-model directive</h>
-	<!-- The directive 'ng-app' means that we are in an AngularJS application  -->
-	<input type="text" ng-model="yourName" />
-	Hello {{ yourName }}
+	<section>
+		<h1>ng-model directive</h1>
+		<input type="text" ng-model="yourName" />
+		Hello {{ yourName }}
+	</section>
 
 	<!-- --------------------------------------------- #Part2 ---------------------------------------------- -->
-	<h1>ng-init directive</h>
-	<!-- The directive 'ng-app' means that we are in an AngularJS application  -->
-	<div ng-init="myList=['My', 'Name', 'Is', 'Ala', 'Eddine', 'Jebali']">
-		myList = {{ myList }}
-	</div>
+	<section>
+		<h1>ng-init directive</h1>
+		<!-- The directive 'ng-app' means that we are in an AngularJS application  -->
+		<div ng-init="myList=['My', 'Name', 'Is', 'Ala', 'Eddine', 'Jebali']">
+			myList = {{ myList }}
+		</div>
 
-	<ul>
-		<li ng-repeat="itemValue in myList">{{itemValue}}</li>
-	</ul>
+		<ul>
+			<li ng-repeat="itemValue in myList">{{itemValue}}</li>
+		</ul>
+	</section>
+
+	<!-- --------------------------------------------- #Par3 ---------------------------------------------- -->
+	<section>
+		<h1>Filters</h1>
+		<h2>All items:</h2>
+		<ul>
+			<li ng-repeat="itemValue in myList">{{itemValue}}</li>
+		</ul>
+
+		<h2>All items in uppercase</h2>
+		<ul>
+			<li ng-repeat="itemValue in myList">{{itemValue | uppercase}}</li>
+		</ul>
+		
+		<h2>All items which contains 'a'</h2>
+		{{myList | filter: 'a'}}
+	</section>
 
 	<!-- Include AngularJS -->
 	<script src="angular.min.js"></script>
