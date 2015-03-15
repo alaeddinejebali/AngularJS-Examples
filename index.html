@@ -3,18 +3,26 @@
 	<title>AnguleJS -Examples</title>
 </head>
 <body ng-app>
-	<div ng-init="myList=[
-					{id: 1, 'content': 'My'}, 
-					{id: 2, 'content': 'Name'}, 
-					{id: 3, 'content': 'Is'}, 
-					{id: 4, 'content': 'Ala'}, 
-					{id: 5, 'content': 'Eddine'}, 
-					{id: 6, 'content': 'Jebali'}
+	<div ng-init="programmingLanguages=[
+					{id: 1, 'content': 'Java'}, 
+					{id: 2, 'content': 'PHP'}, 
+					{id: 3, 'content': 'C#'}, 
+					{id: 4, 'content': 'Perl'}, 
+					{id: 5, 'content': 'ASP'}, 
+					{id: 6, 'content': 'Ruby'}
 				]"></div>
+	<select ng-model="sortingKey">
+		<option value="id" selected>Sort by Id</option>
+		<option value="content">Sort by Content</option>
+	</select>
+	<select ng-model="sortingOrder">
+		<option value="+" selected>ASC</option>
+		<option value="-">DESC</option>
+	</select>
 	<input type="text" ng-model="search" placeholder="Type to filter" />
 	<div>
 		<ul>
-			<li ng-repeat="filteredItem in myList | filter: search | orderBy: '-content'">{{filteredItem | lowercase}}</li>
+			<li ng-repeat="filteredItem in programmingLanguages | filter: search | orderBy: sortingOrder + sortingKey">{{filteredItem | lowercase}}</li>
 		</ul>
 	</div>
 

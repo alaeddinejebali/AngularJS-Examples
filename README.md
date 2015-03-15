@@ -134,6 +134,71 @@ List of examples to understand and practice AngularJS...
 </html>
 ```
 
+#Example #4 (Sort using either by Id or by Content)
+```html
+<html>
+<head>
+	<title>AnguleJS -Examples</title>
+</head>
+<body ng-app>
+	<div ng-init="programmingLanguages=[
+					{id: 1, 'content': 'Java'}, 
+					{id: 2, 'content': 'PHP'}, 
+					{id: 3, 'content': 'C#'}, 
+					{id: 4, 'content': 'Perl'}, 
+					{id: 5, 'content': 'ASP'}, 
+					{id: 6, 'content': 'Ruby'}
+				]"></div>
+	<select ng-model="sortingKey">
+		<option value="id" selected>Sort by Id</option>
+		<option value="content">Sort by Content</option>
+	</select>
+	<input type="text" ng-model="search" placeholder="Type to filter" />
+	<div>
+		<ul>
+			<li ng-repeat="filteredItem in programmingLanguages | filter: search | orderBy: sortingKey">{{filteredItem | lowercase}}</li>
+		</ul>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</body>
+</html>
+```
+
+#Example #4 (Sort using either by Id or by Content) and either in ASC or DESC order
+```html
+<html>
+<head>
+	<title>AnguleJS -Examples</title>
+</head>
+<body ng-app>
+	<div ng-init="programmingLanguages=[
+					{id: 1, 'content': 'Java'}, 
+					{id: 2, 'content': 'PHP'}, 
+					{id: 3, 'content': 'C#'}, 
+					{id: 4, 'content': 'Perl'}, 
+					{id: 5, 'content': 'ASP'}, 
+					{id: 6, 'content': 'Ruby'}
+				]"></div>
+	<select ng-model="sortingKey">
+		<option value="id" selected>Sort by Id</option>
+		<option value="content">Sort by Content</option>
+	</select>
+	<select ng-model="sortingOrder">
+		<option value="+" selected>ASC</option>
+		<option value="-">DESC</option>
+	</select>
+	<input type="text" ng-model="search" placeholder="Type to filter" />
+	<div>
+		<ul>
+			<li ng-repeat="filteredItem in programmingLanguages | filter: search | orderBy: sortingOrder + sortingKey">{{filteredItem | lowercase}}</li>
+		</ul>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</body>
+</html>
+```
 
 
 
