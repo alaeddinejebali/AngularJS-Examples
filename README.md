@@ -38,7 +38,21 @@ List of examples to understand and practice AngularJS...
 </body>
 </html>
 ```
-- Example #2
+<html>
+<head>
+	<title>AnguleJS -Examples</title>
+</head>
+<body ng-app>
+	<h1>ng-init directive</h>
+	<div ng-init="myList=['My', 'Name', 'Is', 'Ala', 'Eddine', 'Jebali']">
+		myList = {{ myList }}
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</body>
+</html>
+
+- Example #2 (using [ng-repeat] [2])
 ```html
 <html>
 <head>
@@ -70,3 +84,4 @@ List of examples to understand and practice AngularJS...
 
 
 [1]: https://docs.angularjs.org/api/ng/directive/ngApp
+[2]: https://docs.angularjs.org/api/ng/directive/ngRepeat
