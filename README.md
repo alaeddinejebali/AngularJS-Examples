@@ -21,4 +21,8 @@ List of examples to understand and practice AngularJS...
 ```
 
 #Thank you!
-Edited using http://dillinger.io/
+- Ala Eddine JEBALI
+- http://jebalialaeddine.com
+- (+216) 96 529 067
+- jebali.alaeddine (att gmail dot com)
+- Edited using http://dillinger.io/
