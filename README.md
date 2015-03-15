@@ -87,8 +87,49 @@ List of examples to understand and practice AngularJS...
 </body>
 </html>
 ```
+#Example #2 (Filter using text field)
+<html>
+<head>
+	<title>AnguleJS -Examples</title>
+</head>
+<body ng-app>
+	<h1>ng-init directive</h>
+	<div ng-init="myList=['My', 'Name', 'Is', 'Ala', 'Eddine', 'Jebali']"></div>
+	<input type="text" ng-model="search" placeholder="Type to filter" />
+	<div>
+		<ul>
+			<li ng-repeat="filteredItem in myList | filter: search">{{filteredItem | lowercase}}</li>
+		</ul>
+	</div>
 
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</body>
+</html>
+```
+#Example #3 (Sort content [Z-A])
+<html>
+<head>
+	<title>AnguleJS -Examples</title>
+</head>
+<body ng-app>
+	<div ng-init="myList=[
+					{id: 1, 'content': 'My'}, 
+					{id: 2, 'content': 'Name'}, 
+					{id: 3, 'content': 'Is'}, 
+					{id: 4, 'content': 'Ala'}, 
+					{id: 5, 'content': 'Eddine'}, 
+					{id: 6, 'content': 'Jebali'}
+				]"></div>
+	<input type="text" ng-model="search" placeholder="Type to filter" />
+	<div>
+		<ul>
+			<li ng-repeat="filteredItem in myList | filter: search | orderBy: '-content'">{{filteredItem | lowercase}}</li>
+		</ul>
+	</div>
 
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</body>
+</html>
 
 
 #Thank you!
