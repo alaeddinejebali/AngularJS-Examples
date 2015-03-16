@@ -3,7 +3,7 @@
 	<title>AnguleJS -Examples</title>
 </head>
 <body ng-app>
-	<div ng-controller="programmingLanguagesController"></div>
+	<div ng-controlle="programmingLanguagesController"></div>
 	<select ng-model="sortingKey">
 		<option value="id" selected>Sort by Id</option>
 		<option value="content">Sort by Content</option>
@@ -19,10 +19,10 @@
 		</ul>
 	</div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script src="angular.min.js"></script>
 	<script type="text/javascript">
 		function programmingLanguagesController($scope){
-			$scope.programmingLanguages = [
+			$scope.programmingLanguages =[
 					{id: 1, 'content': 'Java'}, 
 					{id: 2, 'content': 'PHP'}, 
 					{id: 3, 'content': 'C#'}, 
