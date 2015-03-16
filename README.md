@@ -200,7 +200,47 @@ List of examples to understand and practice AngularJS...
 </html>
 ```
 
+#Using Scopes
+- By passing $scope to the function, I tell to AngularJS that I need in my controller du scope. So AngularJS will create a new scope and inject it in the controller.
+- Using [ng-controller] [3], you link the view to the controller. So any changes to the data are automatically reflected in the View without the need for a manual update AND when you change the view in the controller you can access it.
+```html
+<html>
+<head>
+	<title>AnguleJS -Examples</title>
+</head>
+<body ng-app>
+	<div ng-controller="programmingLanguagesController"></div>
+	<select ng-model="sortingKey">
+		<option value="id" selected>Sort by Id</option>
+		<option value="content">Sort by Content</option>
+	</select>
+	<select ng-model="sortingOrder">
+		<option value="+" selected>ASC</option>
+		<option value="-">DESC</option>
+	</select>
+	<input type="text" ng-model="search" placeholder="Type to filter" />
+	<div>
+		<ul>
+			<li ng-repeat="filteredItem in programmingLanguages | filter: search | orderBy: sortingOrder + sortingKey">{{filteredItem.content | lowercase}}</li>
+		</ul>
+	</div>
 
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script type="text/javascript">
+		function programmingLanguagesController($scope){
+			$scope.programmingLanguages = [
+					{id: 1, 'content': 'Java'}, 
+					{id: 2, 'content': 'PHP'}, 
+					{id: 3, 'content': 'C#'}, 
+					{id: 4, 'content': 'Perl'}, 
+					{id: 5, 'content': 'ASP'}, 
+					{id: 6, 'content': 'Ruby'}
+				]
+		}
+	</script>
+</body>
+</html>
+```
 
 
 #Thank you!
@@ -213,3 +253,4 @@ List of examples to understand and practice AngularJS...
 
 [1]: https://docs.angularjs.org/api/ng/directive/ngApp
 [2]: https://docs.angularjs.org/api/ng/directive/ngRepeat
+[3]: https://docs.angularjs.org/api/ng/directive/ngController
