@@ -1,9 +1,42 @@
+
 # Example-01
-Create a controller to initialize application params
+Initialize application params using a ng-init directive
 ```html
-<!-- Example-01/index.html -->
 <!DOCTYPE html>
-<html lang="en" ng-app="Example_01_App">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example 01</title>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+<body ng-app="" ng-init="application = {
+        title: 'AngularJS- Example 01',
+        description: 'AngularJS has many advantages:',
+        advantages: [
+            'AngularJS Handles Dependencies',
+            'AngularJS Allows Developers to Express UI Declaratively and Reduce Side Effects',
+            'AngularJS Enables Massively Parallel Development',
+            'AngularJS Enables a Design - Development Workflow',
+            'AngularJS Gives Developers Controls',
+            'AngularJS Helps Developers Manage State',
+            'AngularJS Supports Single Page Applications'
+        ]
+    }">
+    <h1 align="center">{{application.title}}</h1>
+    <p>{{application.description}}</p>
+    <ol>
+        <li ng-repeat="advantage in application.advantages">{{advantage}}</li>
+    </ol>
+</body>
+</html>
+```
+
+# Example-02
+Initialize application params using a controller
+```html
+<!-- Example-02/index.html -->
+<!DOCTYPE html>
+<html lang="en" ng-app="Example_02_App">
 <head>
     <meta charset="UTF-8">
     <title>Example 01</title>
@@ -22,11 +55,11 @@ Create a controller to initialize application params
 ```
 
 ```javascript
-# Example-01/js/app.js
-var app = angular.module('Example_01_App', []);
+# Example-02/js/app.js
+var app = angular.module('Example_02_App', []);
 app.controller('ConfigController', function($scope) {
     $scope.application = {
-        title: 'AngularJS- Example 01',
+        title: 'AngularJS- Example 02',
         description: 'AngularJS has many advantages:',
         advantages: [
             'AngularJS Handles Dependencies',
