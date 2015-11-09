@@ -1,6 +1,6 @@
-
-# Example-01
-Initialize application params using a ng-init directive
+# Example-01: Using ng-init
+Initialize application params using ng-init directive
+- Official Documentation of ngInit: https://docs.angularjs.org/api/ng/directive/ngInit
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -31,7 +31,7 @@ Initialize application params using a ng-init directive
 </html>
 ```
 
-# Example-02
+# Example-02: Using controller
 Initialize application params using a controller
 ```html
 <!-- Example-02/index.html -->
@@ -74,61 +74,68 @@ app.controller('ConfigController', function($scope) {
 });
 ```
 
-#Using ng-model directive
+# Example 03: Using ng-model
 - Official Documentation: https://docs.angularjs.org/api/ng/directive/ngModel
-- The directive ['ng-app'] [1] means that we are in an AngularJS application
-- Hello yourName example:
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>AnguleJS -Examples</title>
+    <meta charset="UTF-8">
+    <title>Example 03</title>
+    <script type="text/javascript" src="js/angular.min.js"></script>
 </head>
-<body ng-app>
-	<input type="text" ng-model="yourName" />
-	Hello {{ yourName }}
-
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<body ng-app="">
+    <h1 align="center">Bonjour {{myFriendName}}</h1><hr/>
+    Say Hello in French to: <input type="text" ng-model="myFriendName" placeholder="Friend name...">
 </body>
 </html>
 ```
 
-#Using ng-init directive
-- Official Documentation: https://docs.angularjs.org/api/ng/directive/ngInit
-- Display list values:
-- Example #1
+# Example 04: Using filters
+## Example 04.01: Search item and transform to uppercase
 ```html
-<html>
+<!DOCTYPE html>
+<html lang="en" ng-app="Example_04_01_App">
 <head>
-	<title>AnguleJS -Examples</title>
+    <meta charset="UTF-8">
+    <title>Example 04.01</title>
+    <script src="js/angular.min.js"></script>
 </head>
-<body ng-app>
-	<h1>ng-init directive</h>
-	<div ng-init="programmingLanguages=['Java', 'PHP', 'C#', 'Perl', 'ASP', 'Ruby']">
-		programmingLanguages = {{ programmingLanguages }}
-	</div>
+<body ng-controller="ConfigController">
+    <h1 align="center">{{application.title}}</h1>
+    <p>{{application.description}}</p>
+    <ul>
+        <li ng-repeat="advantage in application.advantages | filter: 'Developers'">{{advantage.label | uppercase}}</li>
+    </ul>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
 ```
 
-- Example #2 (using [ng-repeat] [2])
-```html
-<html>
-<head>
-	<title>AnguleJS -Examples</title>
-</head>
-<body ng-app>
-	<h1>ng-init directive</h>
-	<div ng-init="programmingLanguages=['Java', 'PHP', 'C#', 'Perl', 'ASP', 'Ruby']"></div>
-	<ul>
-		<li ng-repeat="programmingLanguage in programmingLanguages">{{programmingLanguage}}</li>
-	</ul>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-</body>
-</html>
+```javascript
+var app = angular.module('Example_04_01_App', []);
+app.controller('ConfigController', function($scope) {
+    $scope.application = {
+        title: 'AngularJS- Example 04.01',
+        description: 'AngularJS has many advantages:',
+        advantages: [
+            {id: 1, label: 'AngularJS Handles Dependencies'},
+            {id: 2, label: 'AngularJS Allows Developers to Express UI Declaratively and Reduce Side Effects'},
+            {id: 3, label: 'AngularJS Enables Massively Parallel Development'},
+            {id: 4, label: 'AngularJS Enables a Design - Development Workflow'},
+            {id: 5, label: 'AngularJS Gives Developers Controls'},
+            {id: 6, label: 'AngularJS Helps Developers Manage State'},
+            {id: 7, label: 'AngularJS Supports Single Page Applications'}
+        ]
+    };
+});
 ```
+
+
+
+
+
 
 #Using Filters
 - Official documentation: https://docs.angularjs.org/api/ng/filter
