@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Example_04_01_App">
+<head>
+    <meta charset="UTF-8">
+    <title>Example 04.01</title>
+    <script src="js/angular.min.js"></script>
+</head>
+<body ng-controller="ConfigController">
+    <h1 align="center">{{application.title}}</h1>
+    <p>{{application.description}}</p>
+    <ul>
+        <li ng-repeat="advantage in application.advantages | filter: 'Developers'">{{advantage.label | uppercase}}</li>
+    </ul>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
