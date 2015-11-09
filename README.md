@@ -92,6 +92,7 @@ app.controller('ConfigController', function($scope) {
 ```
 
 # Example 04: Using filters
+- Official documentation: https://docs.angularjs.org/api/ng/filter
 ## Example 04.01: Search items and transform to uppercase
 ```html
 <!DOCTYPE html>
