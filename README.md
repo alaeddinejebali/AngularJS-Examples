@@ -1,5 +1,45 @@
-# AngularJS-Examples
-List of examples to understand and practice AngularJS...
+# Example-01
+Create a controller to initialize application params
+```html
+<!-- Example-01/index.html -->
+<!DOCTYPE html>
+<html lang="en" ng-app="Example_01_App">
+<head>
+    <meta charset="UTF-8">
+    <title>Example 01</title>
+    <script src="js/angular.min.js"></script>
+</head>
+<body ng-controller="ConfigController">
+    <h1 align="center">{{application.title}}</h1>
+    <p>{{application.description}}</p>
+    <ol>
+        <li ng-repeat="advantage in application.advantages">{{advantage}}</li>
+    </ol>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
+```
+
+```javascript
+# Example-01/js/app.js
+var app = angular.module('Example_01_App', []);
+app.controller('ConfigController', function($scope) {
+    $scope.application = {
+        title: 'AngularJS- Example 01',
+        description: 'AngularJS has many advantages:',
+        advantages: [
+            'AngularJS Handles Dependencies',
+            'AngularJS Allows Developers to Express UI Declaratively and Reduce Side Effects',
+            'AngularJS Enables Massively Parallel Development',
+            'AngularJS Enables a Design - Development Workflow',
+            'AngularJS Gives Developers Controls',
+            'AngularJS Helps Developers Manage State',
+            'AngularJS Supports Single Page Applications'
+        ]
+    };
+});
+```
 
 #Using ng-model directive
 - Official Documentation: https://docs.angularjs.org/api/ng/directive/ngModel
