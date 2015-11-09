@@ -201,7 +201,7 @@ List of examples to understand and practice AngularJS...
 ```
 
 #Using Scopes
-- By passing $scope to the function, I tell to AngularJS that I need in my controller du scope. So AngularJS will create a new scope and inject it in the controller.
+- By passing $scope to the function, I tell to AngularJS that I need in my controller a scope. So AngularJS will create a new scope and inject it in the controller.
 - Using [ng-controller] [3], you link the view to the controller. So any changes to the data are automatically reflected in the View without the need for a manual update AND when you change the view in the controller you can access it.
 ```html
 <html>
