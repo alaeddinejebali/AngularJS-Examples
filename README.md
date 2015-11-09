@@ -92,7 +92,7 @@ app.controller('ConfigController', function($scope) {
 ```
 
 # Example 04: Using filters
-## Example 04.01: Search item and transform to uppercase
+## Example 04.01: Search items and transform to uppercase
 ```html
 <!DOCTYPE html>
 <html lang="en" ng-app="Example_04_01_App">
@@ -131,6 +131,36 @@ app.controller('ConfigController', function($scope) {
     };
 });
 ```
+
+## Example 04.02: Search items and transform to uppercase and filter by id starting from greater id
+```html
+<!DOCTYPE html>
+<html lang="en" ng-app="Example_04_02_App">
+<head>
+    <meta charset="UTF-8">
+    <title>Example 04.02</title>
+    <script src="js/angular.min.js"></script>
+</head>
+<body ng-controller="ConfigController">
+    <h1 align="center">{{application.title}}</h1>
+    <p>{{application.description}}</p>
+    <ul>
+        <li ng-repeat="advantage in application.advantages | orderBy: id:!reverse">
+            {{advantage.id}}: {{advantage.label | uppercase}}
+        </li>
+    </ul>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
+```
+
+
+
+
+
+
+
 
 
 
