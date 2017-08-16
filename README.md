@@ -168,9 +168,9 @@ app.controller('ConfigController', function($scope) {
 
 
 
-#Using Filters
+# Using Filters
 - Official documentation: https://docs.angularjs.org/api/ng/filter
-- Example #1
+## Example 1
 ```html
 <html>
 <head>
@@ -198,7 +198,7 @@ app.controller('ConfigController', function($scope) {
 </body>
 </html>
 ```
-#Example #2 (Filter using text field)
+## Example 2 (Filter using text field)
 ```html
 <html>
 <head>
@@ -218,7 +218,7 @@ app.controller('ConfigController', function($scope) {
 </body>
 </html>
 ```
-#Example #3 (Sort content [Z-A])
+## Example 3 (Sort content [Z-A])
 ```html
 <html>
 <head>
@@ -245,7 +245,7 @@ app.controller('ConfigController', function($scope) {
 </html>
 ```
 
-#Example #4 (Sort using either by Id or by Content)
+## Example 4 (Sort using either by Id or by Content)
 ```html
 <html>
 <head>
@@ -276,7 +276,7 @@ app.controller('ConfigController', function($scope) {
 </html>
 ```
 
-#Example #4 (Sort using either by Id or by Content) and either in ASC or DESC order
+## Example 5 (Sort using either by Id or by Content) and either in ASC or DESC order
 ```html
 <html>
 <head>
@@ -311,7 +311,7 @@ app.controller('ConfigController', function($scope) {
 </html>
 ```
 
-#Using Scopes
+# Using Scopes
 - Byy passing $scope to the function, I tell to AngularJS that I need in my controller a scope. So AngularJS will create a new scope and inject it in the controller.
 - Using [ng-controller] [3], you link the view to the controller. So any changes to the data are automatically reflected in the View without the need for a manual update AND when you change the view in the controller you can access it.
 ```html
@@ -354,7 +354,7 @@ app.controller('ConfigController', function($scope) {
 ```
 
 
-#Thank you!
+# Thank you!
 - Ala Eddine JEBALI
 - Edited using http://dillinger.io/
 
