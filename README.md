@@ -356,9 +356,6 @@ app.controller('ConfigController', function($scope) {
 
 #Thank you!
 - Ala Eddine JEBALI
-- http://jebalialaeddine.com
-- (+216) 96 529 067
-- jebali.alaeddine (att gmail dot com)
 - Edited using http://dillinger.io/
 
 
